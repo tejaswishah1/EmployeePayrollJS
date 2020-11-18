@@ -1,12 +1,15 @@
-//UC-1-Check Employee Absent/Present Using Random
+//UC-2-Calculate Daily Wage of Employee
 
-const IS_ABSENT = 0;
-
-let empCheck = Math.floor(Math.random()*10)%2;
-if(empCheck == IS_ABSENT){
-    console.log("Employee is absent");
-    return;
+let empHrs = 0;
+switch(empCheck){
+    case IS_PART_TIME:
+        empHrs = PART_TIME_HOURS;
+        break;
+    case IS_FULL_TIME:
+        empHrs = FULL_TIME_HOURS;
+        break;
+    default:
+        empHrs=0;
 }
-else {
-    console.log("Employee is present");
-}
+let empWage = empHrs*WAGE_PER_HOUR;
+console.log("Emp wage = "+empWage)
