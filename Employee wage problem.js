@@ -1,0 +1,1 @@
+console.log('Employee wage problem using JS');
